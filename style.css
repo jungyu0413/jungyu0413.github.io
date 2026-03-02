@@ -115,7 +115,7 @@ a:hover {
 #hero {
   padding: 120px 24px 60px;
   background: linear-gradient(135deg, rgba(247, 250, 252, 0.75) 0%, rgba(237, 242, 247, 0.8) 100%),
-    url("background/baymax.jpg") 60% 60% / cover no-repeat;
+    url("background/baymax.jpg") 85% 50% / cover no-repeat;
   background-color: #edf2f7;
 }
 
@@ -428,7 +428,7 @@ section h2 {
 
 .pub-thumb {
   flex-shrink: 0;
-  width: 220px;
+  width: 280px;
   border-radius: 6px;
   overflow: hidden;
   background: var(--bg-alt);
