@@ -422,6 +422,7 @@ section h2 {
 
 .pub-item.has-thumb {
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
 
@@ -437,13 +438,6 @@ section h2 {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.pub-body {
-  flex: 1;
-  display: flex;
-  gap: 16px;
-  min-width: 0;
 }
 
 .pub-venue {
@@ -791,11 +785,6 @@ footer p {
   .pub-thumb {
     width: 100%;
     height: auto;
-  }
-
-  .pub-body {
-    flex-direction: column;
-    gap: 8px;
   }
 
   .edu-item {
