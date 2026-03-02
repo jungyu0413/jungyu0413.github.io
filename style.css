@@ -257,6 +257,143 @@ section h2 {
   flex-shrink: 0;
 }
 
+/* ===== Education ===== */
+.edu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s;
+}
+
+.edu-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.edu-logo {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.edu-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.edu-logo img[src=""],
+.edu-logo img:not([src]) {
+  display: none;
+}
+
+.edu-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-details h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.edu-degree {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.edu-meta {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+
+.edu-lab {
+  font-size: 0.88rem;
+  margin-top: 8px;
+}
+
+.edu-lab a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+/* ===== Experience ===== */
+.exp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 24px;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.exp-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.exp-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.exp-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+}
+
+.exp-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-details h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.exp-org {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.exp-date {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
 /* ===== Publications ===== */
 .pub-year {
   font-size: 1.2rem;
@@ -522,6 +659,22 @@ footer p {
   .pub-item {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .exp-item {
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .exp-logo {
+    width: 40px;
+    height: 40px;
   }
 
   .nav-toggle {
