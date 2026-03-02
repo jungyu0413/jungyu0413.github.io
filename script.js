@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Fade-in animation on scroll
-const fadeElements = document.querySelectorAll('.pub-item, .project-card, .contact-item, .research-interests li');
+const fadeElements = document.querySelectorAll('.pub-item, .project-card, .contact-item, .research-interests li, .edu-item, .exp-item');
 fadeElements.forEach(el => el.classList.add('fade-in'));
 
 const observer = new IntersectionObserver((entries) => {
