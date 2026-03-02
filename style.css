@@ -114,7 +114,9 @@ a:hover {
 /* ===== Hero ===== */
 #hero {
   padding: 120px 24px 60px;
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: linear-gradient(135deg, rgba(247, 250, 252, 0.85) 0%, rgba(237, 242, 247, 0.9) 100%),
+    url("background/baymax.jpg") center / cover no-repeat;
+  background-color: #edf2f7;
 }
 
 .hero-content {
