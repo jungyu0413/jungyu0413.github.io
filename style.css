@@ -115,7 +115,7 @@ a:hover {
 #hero {
   padding: 120px 24px 60px;
   background: linear-gradient(135deg, rgba(247, 250, 252, 0.75) 0%, rgba(237, 242, 247, 0.8) 100%),
-    url("background/baymax_v2.png?v=2") 85% 90% / cover no-repeat;
+    url("background/baymax_v3.png") 85% 90% / cover no-repeat;
   background-color: #edf2f7;
 }
 
