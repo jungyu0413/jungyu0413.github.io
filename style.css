@@ -529,6 +529,124 @@ section h2 {
   border-color: var(--accent);
 }
 
+/* ===== Resume ===== */
+.resume-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.resume-subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume-subtitle i {
+  font-size: 1rem;
+}
+
+.resume-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.resume-dot {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.resume-content h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+}
+
+.resume-org {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.resume-org a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.resume-org a:hover {
+  text-decoration: underline;
+}
+
+.resume-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.resume-lab {
+  font-size: 0.85rem;
+}
+
+.resume-lab a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.resume-lab a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Awards ===== */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.award-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem 1.2rem;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.award-item:hover {
+  transform: translateY(-2px);
+}
+
+.award-year {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+  min-width: 48px;
+  padding-top: 2px;
+}
+
+.award-details h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.award-details p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 /* ===== Media ===== */
 .media-row {
   display: flex;
@@ -692,10 +810,23 @@ section h2 {
 }
 
 /* ===== Contact ===== */
-.contact-content {
+.contact-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
+}
+
+.contact-map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .contact-item {
@@ -782,7 +913,11 @@ footer p {
     flex-direction: column;
   }
 
-  .contact-content {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-columns {
     grid-template-columns: 1fr;
   }
 
