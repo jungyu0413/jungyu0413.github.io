@@ -165,6 +165,17 @@ a:hover {
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 4px;
+  min-height: 1.5em;
+}
+
+.typing-cursor {
+  animation: blink 0.8s step-end infinite;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .hero-text .affiliation {
@@ -470,6 +481,11 @@ section h2 {
 .venue-tag.cvpr {
   background: #dbeafe;
   color: #1e40af;
+}
+
+.venue-tag.ieie {
+  background: #d1fae5;
+  color: #065f46;
 }
 
 .venue-tag.other {
@@ -870,12 +886,59 @@ section h2 {
   color: var(--accent);
 }
 
+/* ===== Back to Top ===== */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+  z-index: 999;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+}
+
 /* ===== Footer ===== */
 footer {
   padding: 24px 0;
   text-align: center;
   border-top: 1px solid var(--border);
   background: var(--bg);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-social a {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 footer p {
