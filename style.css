@@ -229,6 +229,58 @@ section:nth-child(odd) {
   background: var(--bg-alt);
 }
 
+/* ===== Baymax silhouette motifs ===== */
+#about,
+#awards,
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+
+#about > .container,
+#awards > .container,
+#contact > .container {
+  position: relative;
+  z-index: 1;
+}
+
+#about::after,
+#awards::after,
+#contact::after {
+  content: "";
+  position: absolute;
+  background: url("baymax-silhouette.svg") center / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#about::after {
+  width: 300px;
+  height: 400px;
+  right: -56px;
+  bottom: -52px;
+  opacity: 0.05;
+  transform: rotate(7deg);
+}
+
+#awards::after {
+  width: 260px;
+  height: 350px;
+  left: -64px;
+  bottom: -48px;
+  opacity: 0.045;
+  transform: rotate(-9deg) scaleX(-1);
+}
+
+#contact::after {
+  width: 240px;
+  height: 320px;
+  right: -52px;
+  top: -40px;
+  opacity: 0.04;
+  transform: rotate(-6deg);
+}
+
 section h2 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -800,6 +852,12 @@ footer p {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  #about::after,
+  #awards::after,
+  #contact::after {
+    display: none;
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
