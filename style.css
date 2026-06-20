@@ -262,9 +262,14 @@ section h2 {
   width: 280px;
   border-radius: 6px;
   overflow: hidden;
-  background: var(--bg-alt);
+  background: #eef2f7;
+  border: 1px solid var(--border);
   line-height: 0;
   font-size: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pub-thumb--small {
