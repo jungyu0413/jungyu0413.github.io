@@ -262,7 +262,7 @@ section h2 {
   width: 280px;
   border-radius: 6px;
   overflow: hidden;
-  background: #eef2f7;
+  background: transparent;
   border: 1px solid var(--border);
   line-height: 0;
   font-size: 0;
