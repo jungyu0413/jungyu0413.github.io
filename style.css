@@ -685,6 +685,31 @@ section h2 {
 }
 
 /* ===== Projects ===== */
+#projects {
+  position: relative;
+  overflow: hidden;
+}
+
+#projects > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-mascot {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-mascot--fly {
+  width: 150px;
+  height: auto;
+  top: 40px;
+  right: -10px;
+  filter: drop-shadow(0 14px 22px rgba(43,45,60,0.16));
+  animation: mascot-float 5s ease-in-out infinite;
+}
+
 .project-category {
   font-size: 1.1rem;
   font-weight: 600;
@@ -879,7 +904,8 @@ footer p {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   #awards::after,
-  #contact::after {
+  #contact::after,
+  .section-mascot {
     display: none;
   }
 
