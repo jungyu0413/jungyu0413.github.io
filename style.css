@@ -876,10 +876,6 @@ footer p {
   color: var(--text-light);
 }
 
-.footer-note {
-  margin-bottom: 0.4rem;
-}
-
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   #awards::after,
