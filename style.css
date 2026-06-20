@@ -230,21 +230,18 @@ section:nth-child(odd) {
 }
 
 /* ===== Baymax silhouette motifs ===== */
-#about,
 #awards,
 #contact {
   position: relative;
   overflow: hidden;
 }
 
-#about > .container,
 #awards > .container,
 #contact > .container {
   position: relative;
   z-index: 1;
 }
 
-#about::after,
 #awards::after,
 #contact::after {
   content: "";
@@ -252,15 +249,6 @@ section:nth-child(odd) {
   background: url("baymax-silhouette.svg") center / contain no-repeat;
   pointer-events: none;
   z-index: 0;
-}
-
-#about::after {
-  width: 300px;
-  height: 400px;
-  right: -56px;
-  bottom: -52px;
-  opacity: 0.05;
-  transform: rotate(7deg);
 }
 
 #awards::after {
@@ -292,9 +280,51 @@ section h2 {
 }
 
 /* ===== About ===== */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
 .about-content p {
   margin-bottom: 16px;
   color: var(--text);
+}
+
+.about-mascot {
+  flex-shrink: 0;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-mascot::before {
+  content: "";
+  position: absolute;
+  inset: 8% 0 4% 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, var(--accent-soft) 0%, rgba(255,228,231,0.35) 45%, rgba(255,228,231,0) 72%);
+  z-index: 0;
+}
+
+.about-mascot img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 14px 22px rgba(43,45,60,0.16));
+  animation: mascot-float 4.5s ease-in-out infinite;
+}
+
+@keyframes mascot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 /* ===== Publications ===== */
@@ -852,10 +882,18 @@ footer p {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  #about::after,
   #awards::after,
   #contact::after {
     display: none;
+  }
+
+  .about-content {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .about-mascot {
+    width: 150px;
   }
 
   .hero-content {
