@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 350" fill="#2b2d3c">
+  <ellipse cx="46" cy="190" rx="33" ry="80" transform="rotate(15 46 190)"/>
+  <ellipse cx="214" cy="190" rx="33" ry="80" transform="rotate(-15 214 190)"/>
+  <ellipse cx="92" cy="318" rx="37" ry="32"/>
+  <ellipse cx="168" cy="318" rx="37" ry="32"/>
+  <ellipse cx="130" cy="200" rx="96" ry="122"/>
+  <ellipse cx="130" cy="80" rx="62" ry="52"/>
+</svg>
