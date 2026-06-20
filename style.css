@@ -408,6 +408,16 @@ section h2 {
   white-space: nowrap;
 }
 
+a.venue-tag {
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+a.venue-tag:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
 .venue-tag.aaai {
   background: #fef3c7;
   color: #92400e;
