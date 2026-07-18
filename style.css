@@ -438,6 +438,11 @@ a.venue-tag:hover {
   color: #5b21b6;
 }
 
+.venue-tag.neurips {
+  background: #e0f2fe;
+  color: #075985;
+}
+
 .venue-tag.arxiv {
   background: #fee2e2;
   color: #b31b1b;
