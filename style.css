@@ -443,6 +443,11 @@ a.venue-tag:hover {
   color: #075985;
 }
 
+.venue-tag.iclr {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
 .venue-tag.arxiv {
   background: #fee2e2;
   color: #b31b1b;
