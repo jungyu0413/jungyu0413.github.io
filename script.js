@@ -65,7 +65,7 @@ backToTop.addEventListener('click', () => {
 // Typing animation
 const typedEl = document.getElementById('typed-text');
 if (typedEl) {
-  const phrases = ['Ph.D. Student in AI', 'Trajectory Prediction', 'Crowd Generation', 'World Models'];
+  const phrases = ['Ph.D. Student in AI', 'Robotics', 'Crowd Generation', 'World Models'];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
   function type() {
