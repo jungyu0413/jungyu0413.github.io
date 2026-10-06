@@ -69,20 +69,17 @@ class CV(FPDF):
             self.set_text_color(0, 0, 0)
         self.ln(1)
 
-    def contact_lines(self, items, size=9.5, sep="   |   "):
-        """Pack contact items into as few lines as fit the content width."""
+    def link_row(self, links, size=9, h=4.2, sep="  ·  "):
+        """Short clickable labels instead of printing full URLs."""
         self.set_body(size)
-        max_w = self.content_w - 2 * self.c_margin  # multi_cell pads both sides
-        lines, current = [], ""
-        for item in items:
-            candidate = f"{current}{sep}{item}" if current else item
-            if current and self.get_string_width(candidate) > max_w:
-                lines.append(current)
-                candidate = item
-            current = candidate
-        lines.append(current)
-        for line in lines:
-            self.line_text(self.content_w, 4.5, line)
+        for i, (label, url) in enumerate(links):
+            if i:
+                self.set_text_color(120, 123, 135)
+                self.write(h, sep)
+            self.set_text_color(*ACCENT)
+            self.write(h, label, link=url)
+        self.set_text_color(0, 0, 0)
+        self.ln(h)
 
     def year_heading(self, label: str):
         self.set_bold(10)
@@ -98,17 +95,16 @@ class CV(FPDF):
             self.write(h, part)
         self.ln(h)
 
-    def publication(self, authors: str, title: str, venue: str, links: str = ""):
+    def publication(self, authors: str, title: str, venue: str, links=()):
         self.authors_line(authors)
         self.set_bold(10)
         self.line_text(self.content_w, 4.8, title)
         self.set_body(9.5)
         self.set_text_color(90, 93, 105)
         self.line_text(self.content_w, 4.5, venue)
-        if links:
-            self.set_body(9)
-            self.line_text(self.content_w, 4.2, links)
         self.set_text_color(0, 0, 0)
+        if links:
+            self.link_row(links)
         self.ln(2)
 
 
@@ -124,14 +120,13 @@ def build_cv() -> CV:
     pdf.cell(0, 6, "Ph.D. Student, Artificial Intelligence", new_x="LMARGIN", new_y="NEXT")
     pdf.cell(0, 6, "Graduate School of Artificial Intelligence, Yonsei University", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
-    pdf.contact_lines([
-        "Email: jungyu.lee@yonsei.ac.kr",
-        "Web: jungyu0413.github.io",
-        "GitHub: github.com/jungyu0413",
-        "Google Scholar: scholar.google.com/citations?user=fAaH1PIAAAAJ",
-        "LinkedIn: linkedin.com/in/jungyu-lee-0315sb",
-    ])
-    pdf.set_text_color(0, 0, 0)
+    pdf.link_row([
+        ("jungyu.lee@yonsei.ac.kr", "mailto:jungyu.lee@yonsei.ac.kr"),
+        ("jungyu0413.github.io", "https://jungyu0413.github.io/"),
+        ("GitHub", "https://github.com/jungyu0413"),
+        ("Google Scholar", "https://scholar.google.com/citations?user=fAaH1PIAAAAJ"),
+        ("LinkedIn", "https://www.linkedin.com/in/jungyu-lee-0315sb/"),
+    ], size=9.5, h=4.5, sep="   |   ")
     pdf.ln(2)
 
     # Research interests
@@ -189,7 +184,7 @@ def build_cv() -> CV:
         "JunGyu Lee, Inhwan Bae, Hae-Gon Jeon",
         "Revisiting Numerical Forecasting Models for Language-Based Human Trajectory Prediction",
         "Under review",
-        "Project: jungyu0413.github.io/MoRE/",
+        [("Project", "https://jungyu0413.github.io/MoRE/")],
     )
 
     pdf.year_heading("2026")
@@ -198,7 +193,7 @@ def build_cv() -> CV:
         "Youngwoon Lee, Hae-Gon Jeon",
         "ComPose: When to Trust Hands for Object Pose Tracking",
         "NeurIPS 2026 — Conference on Neural Information Processing Systems (NeurIPS)",
-        "Project: jsshin.com/ComPose/   Paper: arxiv.org/abs/2605.23523",
+        [("Project", "https://jsshin.com/ComPose/"), ("Paper", "https://arxiv.org/abs/2605.23523")],
     )
     pdf.publication(
         "Dong Yeong Kim*, JunGyu Lee*, Jaewon Choi, June Young Seo, Myeongseop Kim, "
@@ -206,8 +201,8 @@ def build_cv() -> CV:
         "Distilling Temporal Coherence into 2D Networks for TRUS Prostate Video Segmentation",
         "MICCAI 2026 — Proceedings of the International Conference on Medical Image Computing "
         "and Computer-Assisted Intervention (MICCAI)",
-        "Project: dydevelop.github.io/DTC-TRUS/   Paper: arxiv.org/abs/2606.31198   "
-        "Code: github.com/DYDevelop/DTC-TRUS",
+        [("Project", "https://dydevelop.github.io/DTC-TRUS/"), ("Paper", "https://arxiv.org/abs/2606.31198"),
+         ("Code", "https://github.com/DYDevelop/DTC-TRUS")],
     )
     pdf.publication(
         "Dong Yeong Kim, Jaewon Choi, Youmin Shin, JunGyu Lee, Myeongseop Kim, "
@@ -216,8 +211,8 @@ def build_cv() -> CV:
         "Back-Projection and Attention-Guided Refinement",
         "MICCAIW 2026 — Proceedings of the International Conference on Medical Image Computing "
         "and Computer-Assisted Intervention Workshop (MICCAIW)",
-        "Project: dydevelop.github.io/PSCT-Net/   Paper: arxiv.org/abs/2606.19867   "
-        "Code: github.com/DYDevelop/PSCT-Net",
+        [("Project", "https://dydevelop.github.io/PSCT-Net/"), ("Paper", "https://arxiv.org/abs/2606.19867"),
+         ("Code", "https://github.com/DYDevelop/PSCT-Net")],
     )
 
     pdf.year_heading("2025")
@@ -226,13 +221,13 @@ def build_cv() -> CV:
         "V-NAW: Video-based Noise-aware Adaptive Weighting for Facial Expression Recognition",
         "CVPRW 2025 — Proceedings of the IEEE/CVF Conference on Computer Vision and "
         "Pattern Recognition Workshop (CVPRW)",
-        "Paper: arxiv.org/abs/2503.15970   Code: github.com/jungyu0413/V-NAW",
+        [("Paper", "https://arxiv.org/abs/2503.15970"), ("Code", "https://github.com/jungyu0413/V-NAW")],
     )
     pdf.publication(
         "JunGyu Lee*, Yeji Choi*, Haksub Kim, Ig-Jae Kim, Gi Pyo Nam",
         "Navigating Label Ambiguity for Facial Expression Recognition in the Wild",
         "AAAI 2025 — Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
-        "Paper: arxiv.org/abs/2502.09993   Code: github.com/jungyu0413/NLA",
+        [("Paper", "https://arxiv.org/abs/2502.09993"), ("Code", "https://github.com/jungyu0413/NLA")],
     )
 
     pdf.year_heading("2024")
@@ -241,7 +236,7 @@ def build_cv() -> CV:
         "Study on Facial Composite Feature Analysis for Determining Subject Anxiety Levels "
         "on Low-Power Computing Modules",
         "IEIE 2024 — Summer Annual Conference of IEIE",
-        "Paper: dbpia.co.kr/Journal/articleDetail?nodeId=NODE11890880",
+        [("Paper", "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11890880")],
     )
 
     # Awards
