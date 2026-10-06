@@ -123,33 +123,41 @@ h2 {
   margin-bottom: 20px;
 }
 
-.pub {
+/* Two-column card grid: figure on top, paper info below */
+.pub-grid {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 24px;
-  align-items: stretch;
-  padding: 18px 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.pub + .pub {
-  margin-top: 8px;
+.pub {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* Thumbnail frame spans the full height of the text block, media centered inside */
+/* Fixed figure area so every card lines up; media is letterboxed inside */
 .pub-thumb {
+  aspect-ratio: 5 / 2;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
 }
 
 .pub-thumb img,
 .pub-thumb video {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pub-body {
+  padding: 14px 16px 16px;
 }
 
 .pub-title {
@@ -234,14 +242,8 @@ footer {
     height: 160px;
   }
 
-  .pub {
+  .pub-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 16px 0;
-  }
-
-  .pub-thumb {
-    max-width: 420px;
   }
 
   .two-col {
