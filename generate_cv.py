@@ -146,7 +146,7 @@ def build_cv() -> CV:
     # Research interests
     pdf.section_title("Research Interests")
     pdf.body_text(
-        "Robotics, Crowd Generation, World Models, Facial Expression Recognition, "
+        "Crowd Generation, Social Robot Navigation, World Models, Facial Expression Recognition, "
         "Medical Image/Video Analysis, Human-Centric AI"
     )
 
