@@ -20,7 +20,7 @@ class CV(FPDF):
         self.right = 192
         self.content_w = self.right - self.left
         self.set_margins(self.left, 16, 210 - self.right)
-        self.set_auto_page_break(auto=True, margin=18)
+        self.set_auto_page_break(auto=True, margin=15)
         self.add_font("cv", "", FONT_DIR / "Arial.ttf")
         self.add_font("cv", "B", FONT_DIR / "Arial Bold.ttf")
         self.add_font("cv", "I", FONT_DIR / "Arial Italic.ttf")
@@ -67,6 +67,20 @@ class CV(FPDF):
             self.set_text_color(120, 123, 135)
             self.line_text(self.content_w - 3, 4.2, meta)
             self.set_text_color(0, 0, 0)
+        self.ln(1)
+
+    def media_item(self, title: str, source: str, label: str, url: str):
+        """Title on one line, then the outlet/date and a clickable label on the next."""
+        self.set_bold(10)
+        self.line_text(self.content_w, 4.8, f"• {title}")
+        self.set_x(self.left + 3)
+        self.set_body(9.5)
+        self.set_text_color(90, 93, 105)
+        self.write(4.5, f"{source}  ·  ")
+        self.set_text_color(*ACCENT)
+        self.write(4.5, label, link=url)
+        self.set_text_color(0, 0, 0)
+        self.ln(4.5)
         self.ln(1)
 
     def link_row(self, links, size=9, h=4.2, sep="  ·  "):
@@ -271,9 +285,20 @@ def build_cv() -> CV:
 
     # Media
     pdf.section_title("Media")
-    pdf.bullet_item(
-        "AI, Reading Inner Feelings (Chosun Ilbo feature)",
-        "Jul 2023",
+    pdf.media_item(
+        "AI, Reading Inner Feelings",
+        "Chosun Ilbo · Jul 2023",
+        "Article", "https://www.chosun.com/economy/science/2023/07/27/CTQOEOWBRRFHBKFVO7P34P5QGM/",
+    )
+    pdf.media_item(
+        "On-site Verification: Drugs, from Inflow to Distribution — Can They Be Stopped?",
+        "MBC Newsdesk · May 2023",
+        "Video", "https://www.youtube.com/watch?v=v42dA6POA84&t=144s",
+    )
+    pdf.media_item(
+        "Customs' Cutting-Edge Detection Technology on the Front Line of the 'War on Drugs'",
+        "JTBC News (D:Issue) · Apr 2023",
+        "Video", "https://www.youtube.com/watch?v=Ey1pFt8AXhQ&t=31s",
     )
 
     return pdf
