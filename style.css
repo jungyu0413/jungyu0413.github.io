@@ -1,16 +1,14 @@
-/* ===== Tokens ===== */
+/* ===== Tokens (GitHub Dark Dimmed palette) ===== */
 :root {
   color-scheme: dark;
-  --bg: #0f1012;
-  --text: #cfd0d4;
-  --muted: #8d8f96;
-  --heading: #f3f3f4;
-  --link: #79b0ff;
-  --link-hover: #a9cdff;
-  --rule: #24262b;
-  --thumb-bg: #17181b;
-  --highlight-bg: rgba(250, 210, 90, 0.06);
-  --highlight-edge: rgba(250, 210, 90, 0.55);
+  --bg: #212830;
+  --text: #d1d7e0;
+  --muted: #9198a1;
+  --heading: #f0f3f6;
+  --link: #6cb6ff;
+  --link-hover: #96d0ff;
+  --rule: #3d444d;
+  --thumb-bg: #262c36;
   --font: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
 }
 
@@ -126,29 +124,16 @@ h2 {
   margin-bottom: 20px;
 }
 
-.highlight-word {
-  background: var(--highlight-bg);
-  box-shadow: inset 0 -2px 0 var(--highlight-edge);
-  padding: 0 3px;
-}
-
 .pub {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 24px;
   align-items: center;
-  padding: 18px 16px;
-  border-left: 3px solid transparent;
-  border-radius: 4px;
+  padding: 18px 0;
 }
 
 .pub + .pub {
   margin-top: 8px;
-}
-
-.pub.highlight {
-  background: var(--highlight-bg);
-  border-left-color: var(--highlight-edge);
 }
 
 .pub-thumb {
@@ -254,7 +239,7 @@ footer {
   .pub {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding: 16px 12px;
+    padding: 16px 0;
   }
 
   .pub-thumb {
