@@ -127,7 +127,7 @@ h2 {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 24px;
-  align-items: stretch;
+  align-items: center;
   padding: 18px 0;
 }
 
@@ -135,8 +135,9 @@ h2 {
   margin-top: 8px;
 }
 
-/* Thumbnail frame spans the full height of the text block, media centered inside */
+/* Every thumbnail gets the same 2:1 frame; media is letterboxed inside */
 .pub-thumb {
+  aspect-ratio: 2 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +150,8 @@ h2 {
 .pub-thumb video {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .pub-title {
@@ -157,10 +159,6 @@ h2 {
   font-weight: 700;
   line-height: 1.35;
   margin-bottom: 4px;
-}
-
-span.pub-title {
-  color: var(--heading);
 }
 
 .pub-authors,
