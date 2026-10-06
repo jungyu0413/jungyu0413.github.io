@@ -173,10 +173,6 @@ span.pub-title {
   color: var(--muted);
 }
 
-.pub-tldr {
-  margin-top: 10px;
-}
-
 .footnote {
   margin-top: 16px;
   font-size: 0.9rem;
