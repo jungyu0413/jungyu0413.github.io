@@ -195,9 +195,9 @@ def build_cv() -> CV:
     pdf.year_heading("Under Review")
     pdf.publication(
         "JunGyu Lee, Inhwan Bae, Hae-Gon Jeon",
-        "Revisiting Numerical Forecasting Models for Language-Based Human Trajectory Prediction",
-        "Under review",
-        [("Project", "https://jungyu0413.github.io/MoRE/")],
+        "Revisiting Numerical Forecasting Models for Language-Based Trajectory Prediction",
+        "arXiv preprint arXiv:2610.07954, 2026 (Under review)",
+        [("Project", "https://jungyu0413.github.io/MoRE/"), ("Paper", "https://arxiv.org/abs/2610.07954")],
     )
 
     pdf.year_heading("2026")
