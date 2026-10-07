@@ -19,8 +19,8 @@ class CV(FPDF):
         self.left = 18
         self.right = 192
         self.content_w = self.right - self.left
-        self.set_margins(self.left, 16, 210 - self.right)
-        self.set_auto_page_break(auto=True, margin=15)
+        self.set_margins(self.left, 14, 210 - self.right)
+        self.set_auto_page_break(auto=True, margin=13)
         self.add_font("cv", "", FONT_DIR / "Arial.ttf")
         self.add_font("cv", "B", FONT_DIR / "Arial Bold.ttf")
         self.add_font("cv", "I", FONT_DIR / "Arial Italic.ttf")
@@ -119,7 +119,7 @@ class CV(FPDF):
         self.set_text_color(0, 0, 0)
         if links:
             self.link_row(links)
-        self.ln(2)
+        self.ln(1.2)
 
 
 def build_cv() -> CV:
@@ -204,6 +204,12 @@ def build_cv() -> CV:
         "Revisiting Numerical Forecasting Models for Language-Based Trajectory Prediction",
         "arXiv preprint arXiv:2610.07954, 2026 (Under review)",
         [("Project", "https://jungyu0413.github.io/MoRE/"), ("Paper", "https://arxiv.org/abs/2610.07954")],
+    )
+    pdf.publication(
+        "Boa Jang*, JunGyu Lee*, Gwanho Lee, Jinwook Choi, Young-Gon Kim",
+        "SGP-TTA: Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
+        "Under review",
+        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
     )
 
     pdf.year_heading("2026")
