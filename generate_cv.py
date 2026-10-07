@@ -37,7 +37,7 @@ class CV(FPDF):
         self.multi_cell(w, h, text, align="L", new_x="LMARGIN", new_y="NEXT", **kwargs)
 
     def section_title(self, title: str):
-        self.ln(3)
+        self.ln(2)
         self.set_bold(11)
         self.set_text_color(35, 45, 60)
         self.cell(0, 7, title.upper(), new_x="LMARGIN", new_y="NEXT")
@@ -45,7 +45,7 @@ class CV(FPDF):
         self.set_draw_color(*ACCENT)
         self.set_line_width(0.6)
         self.line(self.left, y, self.left + 34, y)
-        self.ln(4)
+        self.ln(3)
         self.set_text_color(0, 0, 0)
 
     def body_text(self, text: str, size=10, bold=False):
@@ -193,6 +193,12 @@ def build_cv() -> CV:
     pdf.ln(1)
 
     pdf.year_heading("Under Review")
+    pdf.publication(
+        "JunGyu Lee, Jisu Shin, Seunghyun Shin, Hae-Gon Jeon",
+        "Controllable Crowd Generation through World-Model Planning",
+        "Under review",
+        [("Project", "https://jungyu0413.github.io/Ctrl-CWM/"), ("Code", "https://github.com/jungyu0413/Ctrl-CWM")],
+    )
     pdf.publication(
         "JunGyu Lee, Inhwan Bae, Hae-Gon Jeon",
         "Revisiting Numerical Forecasting Models for Language-Based Trajectory Prediction",
