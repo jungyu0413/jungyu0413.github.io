@@ -203,7 +203,7 @@ def build_cv() -> CV:
         "JunGyu Lee, Inhwan Bae, Hae-Gon Jeon",
         "Revisiting Numerical Forecasting Models for Language-Based Trajectory Prediction",
         "arXiv preprint arXiv:2610.07954, 2026 (Under review)",
-        [("Project", "https://jungyu0413.github.io/MoRE/"), ("Paper", "https://arxiv.org/abs/2610.07954")],
+        [("Project", "https://jungyu0413.github.io/MoRE/"), ("Paper", "https://arxiv.org/abs/2610.07954"), ("Code", "https://github.com/jungyu0413/MoRE")],
     )
     pdf.publication(
         "Boa Jang*, JunGyu Lee*, Gwanho Lee, Jinwook Choi, Young-Gon Kim",
