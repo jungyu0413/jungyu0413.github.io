@@ -196,8 +196,8 @@ def build_cv() -> CV:
     pdf.publication(
         "JunGyu Lee, Jisu Shin, Seunghyun Shin, Hae-Gon Jeon",
         "Controllable Crowd Generation through World-Model Planning",
-        "Under review",
-        [("Project", "https://jungyu0413.github.io/Ctrl-CWM/"), ("Code", "https://github.com/jungyu0413/Ctrl-CWM")],
+        "arXiv preprint arXiv:2610.09438, 2026 (Under review)",
+        [("Project", "https://jungyu0413.github.io/Ctrl-CWM/"), ("Paper", "https://arxiv.org/abs/2610.09438"), ("Code", "https://github.com/jungyu0413/Ctrl-CWM")],
     )
     pdf.publication(
         "JunGyu Lee, Inhwan Bae, Hae-Gon Jeon",
