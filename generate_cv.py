@@ -207,9 +207,9 @@ def build_cv() -> CV:
     )
     pdf.publication(
         "Boa Jang*, JunGyu Lee*, Gwanho Lee, Jinwook Choi, Young-Gon Kim",
-        "SGP-TTA: Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
-        "Under review",
-        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
+        "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
+        "arXiv preprint arXiv:2610.11104, 2026 (Under review)",
+        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("Paper", "https://arxiv.org/abs/2610.11104"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
     )
 
     pdf.year_heading("2026")
