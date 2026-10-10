@@ -197,19 +197,19 @@ def build_cv() -> CV:
         "JunGyu Lee, Jisu Shin, Seunghyun Shin, Hae-Gon Jeon",
         "Controllable Crowd Generation through World-Model Planning",
         "arXiv preprint arXiv:2610.09438, 2026 (Under review)",
-        [("Project", "https://jungyu0413.github.io/Ctrl-CWM/"), ("Paper", "https://arxiv.org/abs/2610.09438"), ("Code", "https://github.com/jungyu0413/Ctrl-CWM")],
+        [("Project", "https://jungyu0413.github.io/Ctrl-CWM/"), ("arXiv", "https://arxiv.org/abs/2610.09438"), ("Code", "https://github.com/jungyu0413/Ctrl-CWM")],
     )
     pdf.publication(
         "JunGyu Lee, Inhwan Bae, Hae-Gon Jeon",
         "Revisiting Numerical Forecasting Models for Language-Based Trajectory Prediction",
         "arXiv preprint arXiv:2610.07954, 2026 (Under review)",
-        [("Project", "https://jungyu0413.github.io/MoRE/"), ("Paper", "https://arxiv.org/abs/2610.07954"), ("Code", "https://github.com/jungyu0413/MoRE")],
+        [("Project", "https://jungyu0413.github.io/MoRE/"), ("arXiv", "https://arxiv.org/abs/2610.07954"), ("Code", "https://github.com/jungyu0413/MoRE")],
     )
     pdf.publication(
         "Boa Jang*, JunGyu Lee*, Gwanho Lee, Jinwook Choi, Young-Gon Kim",
         "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
         "arXiv preprint arXiv:2610.11104, 2026 (Under review)",
-        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("Paper", "https://arxiv.org/abs/2610.11104"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
+        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("arXiv", "https://arxiv.org/abs/2610.11104"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
     )
 
     pdf.year_heading("2026")
@@ -218,7 +218,7 @@ def build_cv() -> CV:
         "Youngwoon Lee, Hae-Gon Jeon",
         "ComPose: When to Trust Hands for Object Pose Tracking",
         "NeurIPS 2026 — Conference on Neural Information Processing Systems (NeurIPS)",
-        [("Project", "https://jsshin.com/ComPose/"), ("Paper", "https://arxiv.org/abs/2605.23523")],
+        [("Project", "https://jsshin.com/ComPose/"), ("arXiv", "https://arxiv.org/abs/2605.23523")],
     )
     pdf.publication(
         "Dong Yeong Kim*, JunGyu Lee*, Jaewon Choi, June Young Seo, Myeongseop Kim, "
@@ -226,7 +226,7 @@ def build_cv() -> CV:
         "Distilling Temporal Coherence into 2D Networks for TRUS Prostate Video Segmentation",
         "MICCAI 2026 — Proceedings of the International Conference on Medical Image Computing "
         "and Computer-Assisted Intervention (MICCAI)",
-        [("Project", "https://dydevelop.github.io/DTC-TRUS/"), ("Paper", "https://arxiv.org/abs/2606.31198"),
+        [("Project", "https://dydevelop.github.io/DTC-TRUS/"), ("Paper", "https://papers.miccai.org/miccai-2026/0295-Paper0460.html"), ("arXiv", "https://arxiv.org/abs/2606.31198"),
          ("Code", "https://github.com/DYDevelop/DTC-TRUS")],
     )
     pdf.publication(
@@ -236,7 +236,7 @@ def build_cv() -> CV:
         "Back-Projection and Attention-Guided Refinement",
         "MICCAIW 2026 — Proceedings of the International Conference on Medical Image Computing "
         "and Computer-Assisted Intervention Workshop (MICCAIW)",
-        [("Project", "https://dydevelop.github.io/PSCT-Net/"), ("Paper", "https://arxiv.org/abs/2606.19867"),
+        [("Project", "https://dydevelop.github.io/PSCT-Net/"), ("Paper", "https://papers.miccai.org/miccai-2026-sat/PedAItrics_004.html"), ("arXiv", "https://arxiv.org/abs/2606.19867"),
          ("Code", "https://github.com/DYDevelop/PSCT-Net")],
     )
 
@@ -246,13 +246,13 @@ def build_cv() -> CV:
         "V-NAW: Video-based Noise-aware Adaptive Weighting for Facial Expression Recognition",
         "CVPRW 2025 — Proceedings of the IEEE/CVF Conference on Computer Vision and "
         "Pattern Recognition Workshop (CVPRW)",
-        [("Project", "https://jungyu0413.github.io/V-NAW/"), ("Paper", "https://arxiv.org/abs/2503.15970"), ("Code", "https://github.com/jungyu0413/V-NAW")],
+        [("Project", "https://jungyu0413.github.io/V-NAW/"), ("Paper", "https://openaccess.thecvf.com/content/CVPR2025W/ABAW/html/Lee_V-NAW_Video-based_Noise-aware_Adaptive_Weighting_for_Facial_Expression_Recognition_CVPRW_2025_paper.html"), ("arXiv", "https://arxiv.org/abs/2503.15970"), ("Code", "https://github.com/jungyu0413/V-NAW")],
     )
     pdf.publication(
         "JunGyu Lee*, Yeji Choi*, Haksub Kim, Ig-Jae Kim, Gi Pyo Nam",
         "Navigating Label Ambiguity for Facial Expression Recognition in the Wild",
         "AAAI 2025 — Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
-        [("Project", "https://jungyu0413.github.io/NLA/"), ("Paper", "https://arxiv.org/abs/2502.09993"), ("Code", "https://github.com/jungyu0413/NLA")],
+        [("Project", "https://jungyu0413.github.io/NLA/"), ("Paper", "https://ojs.aaai.org/index.php/AAAI/article/view/32476"), ("arXiv", "https://arxiv.org/abs/2502.09993"), ("Code", "https://github.com/jungyu0413/NLA")],
     )
 
     pdf.year_heading("2024")
