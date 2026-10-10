@@ -252,7 +252,7 @@ def build_cv() -> CV:
         "JunGyu Lee*, Yeji Choi*, Haksub Kim, Ig-Jae Kim, Gi Pyo Nam",
         "Navigating Label Ambiguity for Facial Expression Recognition in the Wild",
         "AAAI 2025 — Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
-        [("Paper", "https://arxiv.org/abs/2502.09993"), ("Code", "https://github.com/jungyu0413/NLA")],
+        [("Project", "https://jungyu0413.github.io/NLA/"), ("Paper", "https://arxiv.org/abs/2502.09993"), ("Code", "https://github.com/jungyu0413/NLA")],
     )
 
     pdf.year_heading("2024")
@@ -261,7 +261,7 @@ def build_cv() -> CV:
         "Study on Facial Composite Feature Analysis for Determining Subject Anxiety Levels "
         "on Low-Power Computing Modules",
         "IEIE 2024 — Summer Annual Conference of IEIE",
-        [("Paper", "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11890880")],
+        [("Project", "https://jungyu0413.github.io/Eye_Blink_Detection/"), ("Paper", "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11890880"), ("Code", "https://github.com/jungyu0413/Eye_Blink_Detection")],
     )
 
     # Awards
