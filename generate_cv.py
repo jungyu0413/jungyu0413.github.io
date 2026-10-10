@@ -246,7 +246,7 @@ def build_cv() -> CV:
         "V-NAW: Video-based Noise-aware Adaptive Weighting for Facial Expression Recognition",
         "CVPRW 2025 — Proceedings of the IEEE/CVF Conference on Computer Vision and "
         "Pattern Recognition Workshop (CVPRW)",
-        [("Paper", "https://arxiv.org/abs/2503.15970"), ("Code", "https://github.com/jungyu0413/V-NAW")],
+        [("Project", "https://jungyu0413.github.io/V-NAW/"), ("Paper", "https://arxiv.org/abs/2503.15970"), ("Code", "https://github.com/jungyu0413/V-NAW")],
     )
     pdf.publication(
         "JunGyu Lee*, Yeji Choi*, Haksub Kim, Ig-Jae Kim, Gi Pyo Nam",
