@@ -206,16 +206,16 @@ def build_cv() -> CV:
         [("Project", "https://jungyu0413.github.io/MoRE/"), ("arXiv", "https://arxiv.org/abs/2610.07954"), ("Code", "https://github.com/jungyu0413/MoRE")],
     )
     pdf.publication(
-        "Boa Jang*, JunGyu Lee*, Gwanho Lee, Jinwook Choi, Young-Gon Kim",
-        "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
-        "arXiv preprint arXiv:2610.11104, 2026 (Under review)",
-        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("arXiv", "https://arxiv.org/abs/2610.11104"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
-    )
-    pdf.publication(
         "Sang-Hun Han, Changyeon Won, JunGyu Lee, Min-Gyu Park, Hae-Gon Jeon",
         "IORA: Irregular Object Immobilization under Restricted Actuation",
         "arXiv preprint arXiv:2610.30969, 2026 (Under review)",
         [("Project", "https://sanghunhan92.github.io/conference/IORA/"), ("arXiv", "https://arxiv.org/abs/2610.30969")],
+    )
+    pdf.publication(
+        "Boa Jang*, JunGyu Lee*, Gwanho Lee, Jinwook Choi, Young-Gon Kim",
+        "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
+        "arXiv preprint arXiv:2610.11104, 2026 (Under review)",
+        [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("arXiv", "https://arxiv.org/abs/2610.11104"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
     )
 
     pdf.year_heading("2026")
