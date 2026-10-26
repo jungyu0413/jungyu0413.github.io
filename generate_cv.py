@@ -100,7 +100,7 @@ class CV(FPDF):
         self.cell(0, 5, label, new_x="LMARGIN", new_y="NEXT")
         self.ln(1)
 
-    def authors_line(self, authors: str, size=9.5, h=4.5):
+    def authors_line(self, authors: str, size=9.5, h=4.3):
         for i, part in enumerate(authors.split(ME)):
             if i:
                 self.set_bold(size)
@@ -112,14 +112,14 @@ class CV(FPDF):
     def publication(self, authors: str, title: str, venue: str, links=()):
         self.authors_line(authors)
         self.set_bold(10)
-        self.line_text(self.content_w, 4.8, title)
+        self.line_text(self.content_w, 4.6, title)
         self.set_body(9.5)
         self.set_text_color(90, 93, 105)
-        self.line_text(self.content_w, 4.5, venue)
+        self.line_text(self.content_w, 4.3, venue)
         self.set_text_color(0, 0, 0)
         if links:
             self.link_row(links)
-        self.ln(1.2)
+        self.ln(0.8)
 
 
 def build_cv() -> CV:
@@ -211,6 +211,12 @@ def build_cv() -> CV:
         "arXiv preprint arXiv:2610.11104, 2026 (Under review)",
         [("Project", "https://boa-jang.github.io/SGP-TTA/"), ("arXiv", "https://arxiv.org/abs/2610.11104"), ("Code", "https://github.com/Boa-Jang/SGPTTA")],
     )
+    pdf.publication(
+        "Sang-Hun Han, Changyeon Won, JunGyu Lee, Min-Gyu Park, Hae-Gon Jeon",
+        "IORA: Irregular Object Immobilization under Restricted Actuation",
+        "arXiv preprint arXiv:2610.30969, 2026 (Under review)",
+        [("Project", "https://sanghunhan92.github.io/conference/IORA/"), ("arXiv", "https://arxiv.org/abs/2610.30969")],
+    )
 
     pdf.year_heading("2026")
     pdf.publication(
@@ -286,12 +292,10 @@ def build_cv() -> CV:
     pdf.bullet_item(
         "Expression Recognition App",
         "PyQt-based facial expression recognition from images, videos, or real-time webcam",
-        "Python · PyQt",
     )
     pdf.bullet_item(
         "Realtime FER / VA Estimation / Eye Blink Detection / Face Detector",
         "Real-time facial analysis pipelines for expression, affect, and behavioral monitoring",
-        "Python · Real-time · Embedded Systems",
     )
 
     # Media
